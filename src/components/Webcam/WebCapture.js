@@ -99,11 +99,11 @@ const App = ({ playState }) => {
 							(el) =>
 								el.faceDescription !== thisUser.faceDescription
 						);
-						// console.log(attendanceData);
+						console.log(attendanceData);
 					}
 				}
 			}, 1000);
-			// if (!playState) clearInterval(interval);
+			if (!playState) clearInterval(interval);
 		};
 		if (playState) run();
 		// run();
