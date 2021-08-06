@@ -1,38 +1,86 @@
 .App {
-  text-align: center;
+	text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.display-flex {
+	display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.justify-content-center {
+	justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.position-absolute {
+	position: absolute;
 }
 
-.App-link {
-  color: #61dafb;
+.alignCenter {
+	text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.white {
+	color: #fff;
+}
+
+.totalNum {
+	background-color: #fff;
+	padding: 0rem 5rem;
+	margin-top: 30px;
+	border-radius: clamp(5rem, 10rem, 12rem);
+}
+
+.mainNum {
+	font-size: clamp(2rem, 10rem, 15rem);
+}
+
+.d-f {
+	display: flex;
+	align-items: baseline;
+}
+
+.mont {
+}
+
+.cat {
+	font-family: "Catamaran", sans-serif;
+	font-weight: 900;
+}
+
+.smB {
+	padding: 0px 17px;
+	border-radius: 20px;
+	margin-right: 15px;
+	background-color: #fff;
+}
+.negMar {
+	margin-top: -100px;
+}
+
+.btn {
+	border: none;
+	padding: 10px 20px;
+	margin-top: 20px;
+	color: #fff;
+	margin-bottom: 30px;
+	border-radius: 10px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 15px;
+	background-color: #048ba8;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.webcam {
+	height: 90%;
+	overflow: hidden;
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f6f7eb;
+}
+
+.video {
+	width: 100%;
+	height: 100%;
 }
