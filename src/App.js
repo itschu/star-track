@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import "./App.css";
 import Navigation from "./components/Navigation";
+import Noview from "./components/Noview";
 import Webcam from "./components/Webcam";
 
 const Body = styled.div`
@@ -43,8 +44,30 @@ const WebcamContainer = styled.div`
 `;
 
 const App = () => {
+	const [winWidth, setWinWidth] = useState(() => {
+		const { innerWidth: width } = window;
+		return width;
+	});
+
+	useEffect(() => {
+		window.addEventListener("resize", () => setWidth());
+		return () => {
+			window.removeEventListener("resize", () => setWidth());
+		};
+	}, [winWidth]);
+
+	const setWidth = () => {
+		function getWindowDimensions() {
+			const { innerWidth: width } = window;
+			return width;
+		}
+		const width = getWindowDimensions();
+		setWinWidth(width);
+	};
+
 	const [showStartC, setShowStartC] = useState(false);
-	return (
+
+	return winWidth > 800 ? (
 		<>
 			<Navigation />
 			<Body>
@@ -95,6 +118,8 @@ const App = () => {
 				</CamStats>
 			</Body>
 		</>
+	) : (
+		<Noview />
 	);
 };
 
